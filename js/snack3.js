@@ -23,12 +23,25 @@ N.B: fino a raggiungere 3 nome + cognome in lista
 
 // name + surname generator
 
-var randomName = firstNameList[Math.floor(Math.random() * firstNameList.length)];
+while (finalList.length < 3) {
 
-//check
-console.log(randomName);
+    var randomName = firstNameList[Math.floor(Math.random() * firstNameList.length)];
 
-var randomLastname = lastnameList[Math.floor(Math.random() * lastnameList.length)];
+    var randomLastname = lastnameList[Math.floor(Math.random() * lastnameList.length)];
 
-//check
-console.log(randomLastname);
+    var completeName = randomName + " " + randomLastname;
+
+    if (!finalList.includes(completeName)) {
+        finalList.push(completeName);
+    }
+
+}
+
+var insertTitle = document.getElementById("exercise-title");
+
+insertTitle.innerText = "Invitati alla festa:";
+
+var insertList = document.getElementById("result");
+
+insertList.innerText = finalList;
+
