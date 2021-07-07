@@ -7,7 +7,13 @@ se è dispari stampa il numero successivo.
 
 var resultNumber = document.getElementById("result");
 
-var userNumber = parseInt(prompt("Choose a number", 1));
+var userNumber = 0;
+
+do {
+    userNumber = parseInt(prompt("Choose a number", "1"));
+} while (isNaN(userNumber));
+
+// logic to print numbers 
 
 if (userNumber % 2 === 0) {
     resultNumber.innerText = userNumber;
