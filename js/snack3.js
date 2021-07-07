@@ -43,5 +43,5 @@ insertTitle.innerText = "Invitati alla festa:";
 
 var insertList = document.getElementById("result");
 
-insertList.innerText = finalList;
+insertList.innerHTML = finalList;
 
