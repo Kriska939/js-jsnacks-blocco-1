@@ -14,7 +14,7 @@ var somma = 0;
 // for (var i = 0; i < 5; i++) {
 //     var userNumber = parseInt(prompt("Choose a number", 1));
 
-    //check numeri inseriti
+//check numeri inseriti
 //     console.log(userNumber);
 
 //     if (!isNaN(userNumber)) {
@@ -22,9 +22,22 @@ var somma = 0;
 //     }
 // }
 
-// check somma
-// console.log(somma);
-
 
 // versione while
 
+var i = 0;
+while (i < 5) {
+    i++
+
+    var userNumber = parseInt(prompt("Choose a number", 1));
+
+    //check numeri inseriti
+    console.log(userNumber);
+
+    if (!isNaN(userNumber)) {
+        somma += userNumber;
+    }
+}
+
+// check somma
+console.log(somma);
