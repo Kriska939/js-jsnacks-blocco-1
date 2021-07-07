@@ -27,16 +27,19 @@ var somma = 0;
 
 var i = 0;
 while (i < 5) {
-    i++
 
     var userNumber = parseInt(prompt("Choose a number", 1));
 
     //check numeri inseriti
     console.log(userNumber);
 
-    if (!isNaN(userNumber)) {
-        somma += userNumber;
+    // alternative for validation > we don't use IF
+    while (isNaN(userNumber)) {
+        userNumber = parseInt(prompt("Choose a number", 1));
     }
+
+    somma += userNumber;
+    i++
 }
 
 // check somma
